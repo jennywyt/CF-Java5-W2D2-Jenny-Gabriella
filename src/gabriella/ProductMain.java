@@ -16,22 +16,55 @@ public class ProductMain {
         WishList.add(p1);
         WishList.add(p2);
         WishList.add(p3);
-        WishList.add(p4);
-        WishList.add(p5);
-        WishList.add(p6);
+        //WishList.add(p4);
+        //WishList.add(p5);
+        //WishList.add(p6);
+        System.out.println("the wish list is: \n"+WishList);
+        System.out.println(WishList.get(0).name);
 
-        System.out.println("****************from Jenny************************");
+
+        System.out.println("********************************************");
+        int wpreis = 0;
         for (Product element : WishList) {
-            System.out.println(element);
+            wpreis+= element.price;
+            System.out.println(element.name+"   "+element.price);
         }
 
 
+        System.out.println("****************my Way************************");
+
+        Iterator itr= WishList.iterator();
+        System.out.println(itr);
+        int sumPreis=0;
+
+        for(int i=0; i< WishList.size();i++){
+            sumPreis+= WishList.get(i).price;
+
+        }
+        //int sumPreis=0;
+        while(itr.hasNext()) {
+            Product pr =(Product) itr.next();
+            System.out.print("What is that pr?     ");
+            System.out.println(pr);
+
+            System.out.println(pr.name + "   " + pr.price);
+            System.out.println();
+            //sumPreis+=pr.price;
+        }
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("You have to pay for all of this stuff: "+sumPreis);
 
 
     }
 }
 
-
+ /*   String objName;
+        for (int i=0; i<WishList.size(); i++){
+        objName = W
+        System.out.println();
+        // System.out.println(WishList(i).getName());
+        }
+*/
 /*Iterator itr=WishList.iterator();
         System.out.println(itr);
 

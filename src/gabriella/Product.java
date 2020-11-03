@@ -1,18 +1,31 @@
 package gabriella;
 
 public class Product {
+    String name;
+    Double price;
 
-    String Name;
-    int price;
 
-    public Product(String name, int price) {
-        Name = name;
+    public Product(String name, double price) {
+
+        this.name = name;
         this.price = price;
     }
 
-    public String getName() {
-        String prname= this.Name;
-        return prname;
-
+    public String getPrdata(){
+        String prData=this.name+"    "+String.valueOf(this.price);
+        return prData;
     }
+
+
+    public String getName() {
+      return this.name;
+    }
+
+
+
+ @Override
+    public String toString() {
+        return "Product name: " + this.name +", price=" + this.price;
+    }
+
 }
